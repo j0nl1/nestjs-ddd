@@ -10,7 +10,7 @@ class CreateUserService {
 
   async run(userEmail: UserEmail, userPassword: UserPassword): Promise<void> {
     const user = User.create(userEmail, userPassword);
-    await this.userRepository.create(user.toPrimitives());
+    await this.userRepository.create(user);
     this.eventBus.publishAll(user.pullDomainEvents());
   }
 }

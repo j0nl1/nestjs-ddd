@@ -8,8 +8,6 @@ interface UserFromPrimitives {
   password: string;
 }
 
-export type IUser = User | UserFromPrimitives;
-
 export default class User extends AggregateRoot {
   constructor(public readonly email: UserEmail, private readonly password: UserPassword) {
     super();
