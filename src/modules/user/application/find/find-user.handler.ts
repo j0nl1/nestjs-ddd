@@ -9,7 +9,6 @@ export default class FindUserHandler implements IQueryHandler<FindUserQuery> {
 
   async execute(command: FindUserQuery) {
     const { email } = command;
-    console.log(email);
 
     const userEmail = new UserEmail(email);
 
