@@ -5,7 +5,7 @@ import CreateUserCommand from './create-user.command';
 import CreateUserService from './create-user.service';
 
 @CommandHandler(CreateUserCommand)
-export class CreateUserHandler implements ICommandHandler<CreateUserCommand> {
+export default class CreateUserHandler implements ICommandHandler<CreateUserCommand> {
   constructor(private service: CreateUserService) {}
 
   async execute(command: CreateUserCommand) {

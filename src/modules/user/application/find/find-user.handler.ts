@@ -4,7 +4,7 @@ import FindUserQuery from './find-user.query';
 import FindUserService from './find-user.service';
 
 @QueryHandler(FindUserQuery)
-export class FindUserHandler implements IQueryHandler<FindUserQuery> {
+export default class FindUserHandler implements IQueryHandler<FindUserQuery> {
   constructor(private service: FindUserService) {}
 
   async execute(command: FindUserQuery) {

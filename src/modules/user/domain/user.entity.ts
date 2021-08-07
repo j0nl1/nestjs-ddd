@@ -1,4 +1,4 @@
-import { AggregateRoot } from '@shared/domain/aggregate-root';
+import AggregateRoot from '@shared/domain/aggregate-root';
 import CreatedUserEvent from '@user/application/create/created-user.event';
 import UserEmail from './user-email.vo';
 import UserPassword from './user-password.vo';

@@ -4,7 +4,7 @@ import CreateUserCommand from '@user/application/create/create-user.command';
 import FindUserQuery from '@user/application/find/find-user.query';
 
 @Controller('/user')
-export class UserController {
+export default class UserController {
   constructor(private commandBus: CommandBus, private queryBus: QueryBus) {}
   @Post()
   async create(@Body() { email, password }): Promise<void> {
