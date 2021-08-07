@@ -2,7 +2,7 @@ import Event from './event.interface';
 
 const INTERNAL_EVENTS = Symbol();
 
-export abstract class AggregateRoot {
+export default abstract class AggregateRoot {
   private readonly [INTERNAL_EVENTS]: Event[] = [];
 
   public pullDomainEvents(): Event[] {
